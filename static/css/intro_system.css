@@ -1,0 +1,39 @@
+.img_intro{
+    height: 60%;
+    width: 60%;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+.txt_purpose{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: justify;
+}
+.title_sys{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.about-text {
+    text-align: justify;
+    line-height: 1.4;
+    margin: 15px 0;
+}
+
+.members-item {
+    text-align: center;
+}
+
+.name-member {
+    padding: 15px 0;
+}
+
+.member-img {
+    width: 154px;
+    border-radius: 4px;
+}

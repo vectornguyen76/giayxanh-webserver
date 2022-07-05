@@ -1,0 +1,20 @@
+/* PC */
+@media (min-width: 1024px) {
+    .mychart{
+        height: 30% !important;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .mychart{
+        height: 50% !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .mychart{
+        height: 100% !important;
+    }
+}

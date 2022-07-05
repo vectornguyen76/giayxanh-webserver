@@ -1,0 +1,63 @@
+{% extends 'base.html' %} 
+
+{% block head %} 
+<title>Thống kê</title>
+{% endblock %}
+
+{% block content %} 
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Bảng biểu</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+        <li class="breadcrumb-item active">Bảng biểu</li>
+    </ol>
+    <!-- <div class="card mb-4">
+        <div class="card-body">
+            Bảng thống kê hiệu suất làm việc
+        </div>
+    </div> -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            Thống kê dữ liệu
+        </div>
+        <div class="card-body">
+            <table id="datatablesSimple">
+                <thead>
+                    <tr>
+                        <th>Stt</th>
+                        <th>Ngày tháng</th>
+                        <th>Thời gian bắt đầu</th>
+                        <th>Thời gian kết thúc</th>
+                        <th>Tổng thời gian</th>
+                        <th>Số lượng giấy</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Stt</th>
+                        <th>Ngày tháng</th>
+                        <th>Thời gian bắt đầu</th>
+                        <th>Thời gian kết thúc</th>
+                        <th>Tổng thời gian</th>
+                        <th>Số lượng giấy</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <button class="btn btn-info" onclick="exportData()" style="float: right;">
+                <span class="glyphicon glyphicon-download"></span>
+                Download</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %} 
+<script src="{{ url_for('static', filename='./js/report-table.js') }}"></script>
+{% endblock %}

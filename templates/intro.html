@@ -1,0 +1,92 @@
+{% extends 'base.html' %} 
+
+{% block head %} 
+<title>Giới thiệu</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='./css/btn_status.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='./css/intro_system.css') }}">
+{% endblock %}
+
+{% block content %} 
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Giới thiệu</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+        <li class="breadcrumb-item active">Giới thiệu</li>
+    </ol>
+    <div>
+        <h2 class="title_sys">
+            Máy Trải Giấy Tự Động Tích Hợp Hệ Thống Điều Khiển và Giám Sát Qua IoT
+        </h2>
+    </div>
+    <div>
+        <img class="img_intro" src="{{ url_for('static', filename='./img/intro.jpg') }}" alt="intro">
+    </div>
+    
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-bullseye"></i>
+            Tổng quan
+        </div>
+        <div class="txt_purpose">
+            Giấy được làm từ phế phẩm nông nghiệp đang là xu hướng trong việc tận dụng các nguồn phế phẩm. Với nguồn nguyên liệu lớn và sẵn có, giấy được làm từ thân cây chuối mang lại giá trị cao nhưng chưa có quy trình sản xuất tự động. Hiểu được vấn đề đó, nhóm chúng tôi tập trung nghiên cứu, thiết kế và chế tạo dây chuyền sản xuất giấy từ phế phẩm nông nghiệp trong đó chúng tôi tập trung vào khâu sản xuất giấy thành phẩm từ bột chuối đã qua xử lí. Từ đó, chúng tôi đã thiết kế và thực nghiệm nhiều cơ cấu khác nhau trên nhiều loại vải để tìm được các cơ cấu đơn giản, hiệu quả và dễ bảo trì bảo dưỡng với quy mô sản xuất vừa và nhỏ. Sau khi máy được hoàn thiện chế tạo, chúng tôi kiểm tra đánh giá sản phẩm giấy thu được và cải tiến, hoàn thiện để ra được sản phẩm cuối cùng. Sau quá trình đó, máy chúng tôi đã hoàn thiện và đạt hiệu suất 76 giây trên 1 tờ giấy khổ A2. Đồng thời máy được tích hợp hệ thống điều khiển và giám sát qua Web Server để người dùng thuận tiện trong việc tự động thiết lập và thuận tiện trong việc điều khiển, giám sát.
+        </div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-bullseye"></i>
+            Giảng viên hướng dẫn
+        </div>
+        <br>
+        <div class="row members-list">
+            <div class="member-item col col-three members-item">
+                <img src="{{ url_for('static', filename='./img/thayDuong.jpg') }}" alt="name" class="member-img">
+                <div class="name-member">
+                    Thạc sĩ - Thầy Phạm Bạch Dương
+                </div>
+            </div>
+
+            <div class="member-item col col-three members-item">
+                <img src="{{ url_for('static', filename='./img/coNhung.jpg') }}" alt="name" class="member-img">
+                <div class="name-member">
+                    Tiến sĩ - Cô Hoàng Thị Tuyết Nhung
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-bullseye"></i>
+            Thành viên
+        </div>
+        <br>
+        <div class="row members-list">
+            <div class="member-item col col-three members-item">
+                <img src="{{ url_for('static', filename='./img/phuoc.jpg') }}" alt="name" class="member-img">
+                <div class="name-member">
+                    Nguyễn Văn Phước
+                </div>
+            </div>
+
+            <div class="member-item col col-three members-item">
+                <img src="{{ url_for('static', filename='./img/kien.jpg') }}" alt="name" class="member-img">
+                <div class="name-member">
+                    Lê Chí Kiên
+                </div>
+            </div>
+
+            <div class="member-item col col-three members-item">
+                <img src="{{ url_for('static', filename='./img/tien.jpg') }}" alt="name" class="member-img">
+                <div class="name-member">
+                    Ngô Văn Tiến
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %} 
+
+{% endblock %}

@@ -1,0 +1,170 @@
+{% extends 'base.html' %} 
+
+{% block head %} 
+<title>Điều khiển</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='./css/control.css') }}" />
+{% endblock %}
+
+{% block content %} 
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Điều khiển</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+        <li class="breadcrumb-item active">Điều khiển</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-chart-bar me-1"></i>
+                    Bảng điều khiển
+                </div>
+                <div class="body-setup">
+                    <div class="myContainer">
+
+                        <div class="card-body xxx mb-3">
+                            <label>Kết nối</label>
+                        </div>
+                        <div class="card yyy">
+                            <div class="card-body ">
+                                <button class="btn btn-secondary" id="btn-status-off">Tắt</button>
+                                <button class="btn btn-secondary" id="btn-status-on">Bật</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="myContainer">
+                        <div class="card-body xxx mb-3">
+                            <label>Bơm</label>
+                        </div>
+
+                        <div class="card yyy">
+                            <div class="card-body">
+                                <button class="btn-secondary btn" id="btn-pump-off">Tắt</button>
+                                <button class="btn-secondary btn" id="btn-pump-on">Bật</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="myContainer">
+                        <div class="card-body xxx mb-3">
+                            <label>Chế độ</label>
+                        </div>
+                        <div class="card yyy">
+                            <div class="card-body">
+                                <button class="btn-secondary btn" id="btn-mode-1c">1C</button>
+                                <button class="btn-secondary btn" id="btn-mode-nc">NC</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="myContainer">
+                        <div class="card-body xxx mb-3">
+                            <label>Khởi động</label>
+                        </div>
+
+                        <div class="card yyy">
+                            <div class="card-body">
+                                <!-- <button class="btn-secondary btn" id="btn-set-off">Tắt</button> -->
+                                <button class="btn-secondary btn" id="btn-set-on">Bật</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myContainer">
+                        <div class="card-body xxx mb-3">
+                            <label>Chạy</label>
+                        </div>
+                        <div class="card yyy">
+                            <div class="card-body">
+                                <!-- <button class="btn-secondary btn" id="btn-run-off">Tắt</button> -->
+                                <button class="btn-secondary btn" id="btn-run-on">Bật</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-chart-pie me-1"></i>
+                    Thiết lập thời gian
+                </div>
+                <div class="body-setup">
+                    <form action="" id="form">
+                        <div class="myContainer">
+                            <div class="card-body xxx mb-3">
+                                <a>Reset:</a>
+                            </div>
+
+                            <div class="card yyy">
+                                <div class="card-body">
+                                    <input id="reset_time" name="reset_time" type="number"
+                                        class="input-time" value="0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="myContainer">
+                            <div class="card-body xxx mb-3">
+                                <a>Nhúng:</a>
+                            </div>
+
+                            <div class="card yyy">
+                                <div class="card-body">
+                                    <input id="dip_time" name="dip_time" type="number"
+                                        class="input-time" value="0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="myContainer">
+                            <div class="card-body xxx mb-3">
+                                <a>Ráo:</a>
+                            </div>
+
+                            <div class="card yyy">
+                                <div class="card-body">
+                                    <input id="dry_time" name="dry_time" type="number"
+                                        class="input-time" value="0">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="myContainer">
+                            <div class="card-body xxx mb-3">
+                                <a>Ép:</a>
+                            </div>
+
+                            <div class="card yyy">
+                                <div class="card-body">
+                                    <input id="extract_time" name="extract_time" type="number"
+                                        class="input-time" value="0">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="myContainer">
+
+                            <div class="card zzz">
+                                <div class="card-body">
+                                    <button class="btn-primary btn" id="submit">Thiết lập</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %} 
+<script src="{{ url_for('static', filename='/js/control.js') }}"></script>
+
+{% endblock %}
