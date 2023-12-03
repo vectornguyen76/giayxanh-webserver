@@ -1,23 +1,33 @@
 # Automatic Paper Spreading Machine Integrated Control and Monitoring System Via IoT
 
-# Website
-https://giayxanh.online/
+### Architecture
+  <p align="center">
+  <img src="./static/img/architecture.jpg" alt="Architecture" />
+  <br>
+  <em>System Architecture</em>
+  </p>
 
-# How to Deploy on Nginx - Ubuntu Server 18.04
-## 1. Update and upgrade
+## Video demo
+[![Video](https://i9.ytimg.com/vi/ZCI2b2CaejA/maxresdefault.jpg?v=62e15619&sqp=COj1r6sG&rs=AOn4CLCU9DCtc2ntQHSQVSUkS-rQIZgk8g)](https://youtu.be/ZCI2b2CaejA?si=e3PhTrHCjImcZjcZ)
+
+## Website
+https://giayxanh.online
+
+## How to Deploy on Nginx - Ubuntu Server 18.04
+### 1. Update and upgrade
 ```
 sudo apt update
 sudo apt upgrade
 ```
-## 2. Install Nginx
+### 2. Install Nginx
 ```
 sudo apt install nginx
 ```
-## 3. Create 1 file on sites-enabled in Nginx
+### 3. Create 1 file on sites-enabled in Nginx
 ```
 sudo nano /etc/nginx/sites-enabled/giayxanh
 ```
-## 4. Add context
+### 4. Add context
 ```
 server {
 	listen 80;
@@ -31,52 +41,52 @@ server {
 	}
 }
 ```
-## 5. Unlink default file on site-enabled
+### 5. Unlink default file on site-enabled
 ```
 sudo unlink /etc/nginx/sites-enabled/default
 ```
-## 6. Test to make sure that there are no syntax errors in any of your Nginx files
+### 6. Test to make sure that there are no syntax errors in any of your Nginx files
 ```
 sudo nginx -t
 ```
-## 7. Reload Nginx
+### 7. Reload Nginx
 ```
 sudo nginx -s reload
 ```
-## 8. Install python 3.8
+### 8. Install python 3.8
 ```
 sudo apt install python3-pip
 
 sudo apt install python3.8
 ```
-## 9. Add python3 choice using python3.6
+### 9. Add python3 choice using python3.6
 ```
 sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1
 ```
-## 10. Add python3 choice using python3.8
+### 10. Add python3 choice using python3.8
 ```
 sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 2
 ```
-## 11. Install pip and requirements.txt
+### 11. Install pip and requirements.txt
 ```
 pip3 install --upgrade pip
 
 pip3 install -r requirements.txt
 ```
-## 12. Install gunicorn3
+### 12. Install gunicorn3
 ```
 sudo apt install gunicorn3
 ```
-## 15. Finally build and run app on gunicorn3
+### 15. Finally build and run app on gunicorn3
 ```
 gunicorn3 --bind=0.0.0.0:8080 --timeout 200 app:app --daemon
 ```
-## 15. Kill gunicorn3 if you stop the app
+### 15. Kill gunicorn3 if you stop the app
 ```
 sudo pkill -f gunicorn3
 ```
 
-# Result
+## Result
 ![Screenshot 2022-06-14 100923](https://user-images.githubusercontent.com/80930272/173485895-3bbc62cd-ea58-4c2c-898e-43963937b7d6.png)
 ![Screenshot 2022-06-14 101106](https://user-images.githubusercontent.com/80930272/173485898-ca638d50-651d-4cff-a69f-26a84c91f4c5.png)
 ![Screenshot 2022-06-14 101131](https://user-images.githubusercontent.com/80930272/173485900-b1d54eb7-fbc1-4efd-961f-053ef88d6946.png)
